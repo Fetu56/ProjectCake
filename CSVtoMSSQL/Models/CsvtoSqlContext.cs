@@ -46,6 +46,7 @@ public partial class CsvtoSqlContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("tpep_pickup_datetime");
             entity.Property(e => e.TripDistance)
+            .null
                 .HasColumnType("decimal(4, 2)")
                 .HasColumnName("trip_distance");
         });
