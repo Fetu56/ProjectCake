@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CSVtoMSSQL.Models;
+﻿namespace CSVtoMSSQL.Models;
 
 public partial class Cab
 {
@@ -9,15 +6,15 @@ public partial class Cab
 
     public DateTime TpepDropoffDatetime { get; set; }
 
-    public byte PassengerCount { get; set; }
+    public byte? PassengerCount { get; set; }
 
     public decimal TripDistance { get; set; }
 
-    public Flag StoreAndFwdFlag { get; set; }
+    public Flag? StoreAndFwdFlag { get; set; }
 
-    public short PulocationId { get; set; }
+    public short PULocationId { get; set; }
 
-    public short DolocationId { get; set; }
+    public short DOLocationId { get; set; }
 
     public decimal FareAmount { get; set; }
 

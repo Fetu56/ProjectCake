@@ -27,12 +27,12 @@ public partial class CsvtoSqlContext : DbContext
                 .HasNoKey()
                 .ToTable("Cab");
 
-            entity.Property(e => e.DolocationId).HasColumnName("DOLocationID");
+            entity.Property(e => e.DOLocationId).HasColumnName("DOLocationID");
             entity.Property(e => e.FareAmount)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("fare_amount");
             entity.Property(e => e.PassengerCount).HasColumnName("passenger_count");
-            entity.Property(e => e.PulocationId).HasColumnName("PULocationID");
+            entity.Property(e => e.PULocationId).HasColumnName("PULocationID");
             entity.Property(e => e.StoreAndFwdFlag)
                 .HasColumnType("char(3)")
                 .HasColumnName("store_and_fwd_flag");
@@ -46,7 +46,6 @@ public partial class CsvtoSqlContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("tpep_pickup_datetime");
             entity.Property(e => e.TripDistance)
-            .null
                 .HasColumnType("decimal(4, 2)")
                 .HasColumnName("trip_distance");
         });
