@@ -17,9 +17,16 @@ namespace CSVtoMSSQL.Logic
             return csv.GetRecords<T>().ToList();
         }
 
-        public static T WriteToFile<T>()
+        public static void WriteToFile<T>(List<T> records, string pathToSave, Type? modelMap = null)
         {
-            throw new NotImplementedException();
+            using var writer = new StreamWriter(pathToSave);
+            using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+            if (modelMap is not null)
+            {
+                csv.Context.RegisterClassMap(modelMap);
+            }
+
+            csv.WriteRecords(records);
         }
     }
 }

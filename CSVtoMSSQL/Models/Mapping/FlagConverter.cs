@@ -2,7 +2,7 @@
 using CsvHelper.TypeConversion;
 using CsvHelper;
 
-namespace CSVtoMSSQL.Models
+namespace CSVtoMSSQL.Models.Mapping
 {
     public class FlagConverter : DefaultTypeConverter
     {
@@ -13,12 +13,12 @@ namespace CSVtoMSSQL.Models
                 return null;
             }
 
-            if (text?.Length != 1 || !Enum.IsDefined(typeof(Flag), (int)text[0]))
+            if (text?.Length != 1 || !Enum.IsDefined(typeof(NoYesFlag), (int)text[0]))
             {
                 throw new InvalidCastException("Wrong data in flag column.");
             }
 
-            return (Flag)text[0];
+            return (NoYesFlag)text[0];
         }
     }
 }

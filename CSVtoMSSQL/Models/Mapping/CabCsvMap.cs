@@ -1,6 +1,6 @@
 ﻿using CsvHelper.Configuration;
 
-namespace CSVtoMSSQL.Models
+namespace CSVtoMSSQL.Models.Mapping
 {
     public class CabCsvMap : ClassMap<Cab>
     {

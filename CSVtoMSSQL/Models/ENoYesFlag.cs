@@ -1,6 +1,6 @@
 ﻿namespace CSVtoMSSQL.Models
 {
-    public enum Flag
+    public enum NoYesFlag
     {
         No = 'N',
         Yes = 'Y'

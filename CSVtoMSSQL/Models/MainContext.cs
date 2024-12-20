@@ -2,13 +2,13 @@
 
 namespace CSVtoMSSQL.Models;
 
-public partial class CsvtoSqlContext : DbContext
+public partial class MainContext : DbContext
 {
-    public CsvtoSqlContext()
+    public MainContext()
     {
     }
 
-    public CsvtoSqlContext(DbContextOptions<CsvtoSqlContext> options)
+    public MainContext(DbContextOptions<MainContext> options)
         : base(options)
     {
     }

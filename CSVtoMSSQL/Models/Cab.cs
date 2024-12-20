@@ -10,7 +10,7 @@ public partial class Cab
 
     public decimal TripDistance { get; set; }
 
-    public Flag? StoreAndFwdFlag { get; set; }
+    public NoYesFlag? StoreAndFwdFlag { get; set; }
 
     public short PULocationId { get; set; }
 
